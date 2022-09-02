@@ -1,0 +1,189 @@
+/* Mobie first design */
+/* set of variables for colors */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+:root {
+  --primary-color: #24292f;
+  --secondary-color: #a26868;
+  --global-text-color: red;
+  --title-color: "";
+  --white: #fff;
+  --text-size: 1rem;
+  --text-nav-size: 1.4rem;
+  --modal-container-color: #a2686845;
+  --mob-text-nav-size: 1.2rem;
+}
+
+.logo {
+  font-family: "Great Vibes", cursive;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.hide_element {
+  display: none;
+}
+.copyrights {
+  width: 100%;
+  padding: 0px 30px;
+  box-sizing: border-box;
+}
+.copyrights_author a {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    #24292f,
+    #29292e,
+    #2c292d,
+    #2e292b,
+    #2e2a2a
+  );
+}
+.screen p {
+  margin: 0px;
+}
+
+/* Nav component */
+
+.nav {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+/* Nnav component   */
+
+.n_container {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0rem 3rem;
+}
+.n_nav_container {
+  display: none;
+  margin: 0px;
+  padding: 0px;
+  color: var(--white) !important;
+  font-size: var(--text-nav-size);
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.n_nav_container li {
+  list-style-type: none;
+  border-bottom: 4px solid var(--white);
+  padding: 5px;
+  border-radius: 5px;
+}
+.n_nav_container li:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .n_nav_container {
+    display: flex;
+  }
+  .n_container {
+    display: flex;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+}
+.active_li {
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+/* Mnav component */
+
+.m_nav_container {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.icons {
+  width: 35px;
+  height: 35px;
+}
+
+.menu_icon {
+  border: 1px solid var(--secondary-color);
+  padding: 10px;
+  border-radius: 15px;
+}
+@media screen and (min-width: 768px) {
+  .m_nav_container {
+    display: none;
+  }
+}
+
+/* MenuModal component */
+
+.modal_container {
+  position: absolute;
+  background-color: var(--modal-container-color);
+  top: 0px;
+  width: 100vw !important;
+  left: 0px;
+  height: 100vh !important;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  min-height: 80vh;
+  background-color: var(--white);
+}
+
+.modal_header {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.modal_body {
+  width: 100%;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.m_nav_elements_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px;
+  font-size: var(--mob-text-nav-size);
+}
+.m_nav_elements_container li {
+  list-style: none;
+  padding: 10px 30px;
+}
