@@ -14,7 +14,7 @@ const AppDownIcon = ({ handleClick, ...props }) => {
         <motion.path
           initial={{ opacity: 0, pathLength: 0 }}
           animate={{ opacity: 1, pathLength: 1 }}
-          transition={{ delay: 3, duration: 2 }}
+          transition={{ delay: 3, duration: 1, ease: "easeInOut" }}
           fill="none"
           stroke="white"
           strokeLinecap="round"
