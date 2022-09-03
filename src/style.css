@@ -11,6 +11,7 @@
   --text-nav-size: 1.4rem;
   --modal-container-color: #a2686845;
   --mob-text-nav-size: 1.2rem;
+  --nav-height: 80px;
 }
 
 .logo {
@@ -54,10 +55,11 @@
 
 .nav {
   width: 100vw;
-  height: 80px;
+  height: var(--nav-height);
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   background-color: rgba(0, 0, 0, 0.08);
@@ -126,7 +128,32 @@
   width: 35px;
   height: 35px;
 }
+.contact_icon {
+  width: 45px;
+  height: 45px;
+}
 
+.down_icon {
+  width: 70px;
+  height: 70px;
+}
+@media screen and (min-width: 568px) {
+  .icons {
+    width: 50px;
+    height: 50px;
+  }
+  .contact_icon {
+    width: 100px;
+    height: 100px;
+  }
+  .down_icon {
+    width: 85px;
+    height: 85px;
+  }
+}
+.down_icon_container {
+  padding: 30px 0px;
+}
 .menu_icon {
   border: 1px solid var(--secondary-color);
   padding: 10px;
@@ -186,4 +213,81 @@
 .m_nav_elements_container li {
   list-style: none;
   padding: 10px 30px;
+}
+
+/*  Home Component  */
+
+.container {
+  width: 100%;
+  min-height: calc(80vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .container {
+    width: 1600px;
+    margin: auto;
+  }
+}
+.name {
+  color: white;
+  font-size: 11vw;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0px;
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.name_job {
+  color: rgb(169, 169, 169);
+  font-size: 4vw;
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (min-width: 1290px) {
+  .name {
+    font-size: 8em;
+  }
+  .name_job {
+    font-size: 2em;
+  }
+}
+
+.flex_col_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact_container {
+  width: 100%;
+  padding: 5px 0px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
